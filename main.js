@@ -1,8 +1,32 @@
-if( !$('#' + id ).val() ){
+$(document).ready(function() {
+    $('#dropDownTopicName').change(function(){
+        ajaxGet();
+    });
+
+    //set current tab or default tab(read) on form laod
+    var tabName = $('#hiddenTabName').val();
+    document.getElementById(tabName == "" ? "readTab" : tabName).click();
+
+    //Filter topic names
+    filterTopicNames();
+    $('input:radio[name="radioFilterTopic"]').change(function() {
+        filterTopicNames();
+    });
+});
+
+// Validates if a text field has value
+function isTextFieldSpecified(id)
+{
+	var isValid = true;
+	
+	if( !$('#' + id ).val() ){
 		$("label[for='" + id + "']").addClass("error");
 		$("#"+id).addClass("form-error-field");
 		isValid = false;
 	}
+	
+	return isValid;
+}
     
     function addErrorMessage(id,errorMessage){
 	$("#"+id).addClass("form-error-field");
