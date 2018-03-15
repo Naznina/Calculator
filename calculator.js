@@ -30,6 +30,10 @@ function myFunction() {
  function msg() {
      alert("Thanks for using this calculator!");
      
+     alert("Thanks for using this !");
+      
+     alert("Thanks for using this calculator!");
+     
      alert("Thanks for using this calculator!");
  }
  /*function checkClicks() {
