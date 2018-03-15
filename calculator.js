@@ -35,6 +35,8 @@ function myFunction() {
      alert("Thanks for using this calculator!");
      
      alert("Thanks for using this calculator!");
+     
+     alert("Thanks for using this calculator!");
  }
  /*function checkClicks() {
 
